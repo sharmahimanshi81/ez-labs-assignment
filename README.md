@@ -2,6 +2,13 @@
 
 **EZ Assignment** is a responsive React web application that includes a **Hero Section**, a **validated Contact Form**, and a **responsive Header** with a toggle menu for mobile view.  
 It is built entirely using **pure React.js and CSS**, without any external UI or state management libraries — focusing on simplicity, performance, and responsiveness.
+This project was developed as part of the EZ Labs Assignment. It is a single-page, fully responsive website built using React.js and CSS, faithfully recreated based on the provided Figma design.
+
+A contact form is integrated with the given API endpoint and includes form validation to prevent empty fields or invalid email entries. Upon successful submission, the message “Form Submitted” is displayed on the screen.
+
+The background and mandala design are styled for a clean, cohesive aesthetic, with added UI enhancements such as improved spacing, text alignment, and hover effects to elevate the overall user experience.
+
+The project emphasizes design accuracy, responsiveness, and functional form integration.
 
 ---
 ## 🚀 Live Demo
