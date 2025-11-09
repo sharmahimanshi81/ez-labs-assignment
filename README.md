@@ -4,6 +4,11 @@
 It is built entirely using **pure React.js and CSS**, without any external UI or state management libraries — focusing on simplicity, performance, and responsiveness.
 
 ---
+## 🚀 Live Demo
+
+🎯 **Deployed Website:** [https://ez-labs-assignment.onrender.com/](https://ez-labs-assignment.onrender.com/)
+
+> Hosted on **Render** for live access and testing.
 
 ## 🚀 Features
 
@@ -46,6 +51,7 @@ It is built entirely using **pure React.js and CSS**, without any external UI or
 | **Styling** | CSS (Pure CSS / CSS Modules) |
 | **State Management** | React Hooks (`useState`, `useEffect`) |
 | **Build Tool** | Create React +Vite website |
+| **Deployment Tool** | Render|
 | **Version Control** | Git & GitHub |
 
 ---
