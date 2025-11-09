@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=Halant:wght@400&display=swap");
+
+/*  HERO SECTION */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #ffe5db; /* soft peach base */
+}
+
+/* Soft warm tone overlay — helps blend mandala edges naturally */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 229, 219, 0.15) 0%,
+    rgba(255, 229, 219, 0.35) 100%
+  );
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/*  NAVBAR */
+.navbar {
+  height: 103px;
+  background: rgba(255, 251, 251, 0.35);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.brand {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 32px;
+  color: #0f3255;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  font-family: "Instrument Sans", sans-serif;
+  color: #0f3255;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #f15d2b;
+}
+
+/*  HERO CONTENT */
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 0 120px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+/* LEFT SIDE */
+.left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mandala Wrapper — Deep edge merging */
+.mandala-wrapper {
+  position: relative;
+  width: 430px; /* slightly enlarged for merge */
+  height: 430px;
+  left: -10px;
+  top: 5px;
+  filter: brightness(1.05) contrast(1.1) saturate(1.15)
+          drop-shadow(0 0 12px rgba(245, 179, 155, 0.15))
+          blur(0.6px);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Mandala Image */
+.mandala {
+  width: 110%;
+  height: 110%;
+  object-fit: contain;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.mandala-wrapper:hover .mandala {
+  transform: scale(1.05);
+}
+
+/*  Smaller, Centered Logo */
+.vfilms-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px; /* reduced from 388px */
+  height: auto; /* keeps proportions correct */
+  z-index: 5;
+}
+
+/* RIGHT SIDE */
+.right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  z-index: 2;
+}
+
+/* Typography */
+.main-heading {
+  font-family: "Island Moments", cursive;
+  font-weight: 400;
+  font-size: 90px;
+  color: #0f3255;
+  line-height: 1.1;
+  max-width: 700px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.sub-heading {
+  font-family: "Halant", serif;
+  font-size: 36px;
+  color: #f15d2b;
+  margin: 20px 0;
+}
+
+.description {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 18px;
+  color: #252729;
+  line-height: 1.4;
+  max-width: 480px;
+}
+
+/*  RESPONSIVE DESIGN */
+@media (max-width: 1280px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 30px;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-heading {
+    font-size: clamp(48px, 8vw, 90px);
+    margin-top: 10px;
+  }
+
+  .sub-heading {
+    font-size: 28px;
+  }
+
+  .description {
+    max-width: 90%;
+  }
+
+  .mandala-wrapper {
+    width: 360px;
+    height: 360px;
+    left: 0;
+    top: 0;
+    filter: brightness(1.05) contrast(1.08) blur(0.5px);
+  }
+
+  .vfilms-logo {
+    width: 230px; /* scale down proportionally */
+  }
+}
+
+@media (max-width: 768px) {
+  .mandala-wrapper {
+    width: 300px;
+    height: 300px;
+  }
+
+  .vfilms-logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mandala-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+
+  .vfilms-logo {
+    width: 180px;
+  }
+
+  .main-heading {
+    font-size: 56px;
+  }
+
+  .sub-heading {
+    font-size: 24px;
+  }
+}

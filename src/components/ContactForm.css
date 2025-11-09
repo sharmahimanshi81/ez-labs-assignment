@@ -1,0 +1,232 @@
+.contact-container {
+  position: relative;
+  min-height: 100vh;
+  background-color: #ffe5db; /* soft peach background */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 120px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+/*  Left Mandala */
+.footer-left {
+  position: absolute;
+  bottom: -10px; /* slightly outside for edge fusion */
+  left: -10px;
+  width: 420px;
+  opacity: 0.55;
+  filter: brightness(1.04) contrast(1.1) saturate(1.2)
+    drop-shadow(0 0 8px rgba(245, 179, 155, 0.2)) blur(0.3px);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/*  Right Mandala */
+.footer-right {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 420px;
+  opacity: 0.55;
+  transform: rotate(180deg);
+  filter: brightness(1.04) contrast(1.1) saturate(1.2)
+    drop-shadow(0 0 8px rgba(245, 179, 155, 0.2)) blur(0.3px);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/*  Gentle Warm Overlay for Natural Merge */
+.contact-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 229, 219, 0.15) 0%,
+    rgba(255, 229, 219, 0.35) 100%
+  );
+  mix-blend-mode: soft-light;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/*  TEXT CONTENT */
+.contact-left {
+  width: 45%;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 20px;
+  color: #252729;
+  z-index: 2;
+  line-height: 1.6;
+}
+
+.contact-right {
+  width: 45%;
+  z-index: 2;
+  position: relative;
+}
+
+/*  Join the Story heading (new) */
+.join-story {
+  font-family: "Instrument Sans", sans-serif;
+  color: #252729;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+}
+
+/* Existing right-side heading */
+.contact-right h2 {
+  font-size: 32px;
+  font-family: "Instrument Sans", sans-serif;
+  color: #252729;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Paragraph text */
+.contact-right p {
+  margin-bottom: 20px;
+  font-family: "Instrument Sans", sans-serif;
+  color: #555;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px;
+  background-color: #e45a1c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #c54d18;
+}
+
+.status {
+  margin-top: 10px;
+  color: #252729;
+}
+
+.contact-info {
+  margin-top: 10px;
+  color: #e45a1c;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 60px;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 320px;
+    opacity: 0.5;
+  }
+
+  .join-story,
+  .contact-right h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 40px 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 250px;
+    opacity: 0.5;
+  }
+
+  .contact-left {
+    font-size: 18px;
+  }
+
+  .join-story,
+  .contact-right h2 {
+    font-size: 26px;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-left,
+  .footer-right {
+    width: 200px;
+    opacity: 0.45;
+  }
+
+  .join-story,
+  .contact-right h2 {
+    font-size: 22px;
+  }
+}
+button {
+  width: 160px;
+  height: 50px;
+  margin: 20px auto 0;
+  background-color: #e45a1c;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px; /*  Rounded corners */
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #c94b17;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #e8a58a;
+  cursor: not-allowed;
+}
